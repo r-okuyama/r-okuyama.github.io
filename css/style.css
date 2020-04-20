@@ -1,0 +1,402 @@
+@charset 'UTF-8';
+
+/* 共通設定ーーーーーーーーーーーーーーーーー */
+body{
+    width: 100%;
+    font-size: 0.9em;
+}
+
+
+
+/* ヘッダー　ーーーーーーーーーーーーーーーー */
+.hd-name{
+    width: 90%;
+    height: 25em;
+    margin: 0 auto;
+    color: rgb(65, 63, 63);
+    font-family: 'Baloo Bhai 2', cursive;
+    display: flex; /* 子要素をflexboxで揃える */
+    flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+    justify-content: center;
+    align-items: flex-start;  /* 子要素をflexboxにより中央に配置する */
+    position: relative;
+}
+
+.hd-name>p{
+    font-size: 2em;
+}
+
+.hd-name>p>span{
+    font-size: 2em;
+}
+
+.face-icon{
+    display: block;
+    width: 7em;
+    height: auto;
+    padding: 0.3em;
+    position: absolute;
+    right: 3em;
+    bottom: 0;
+
+}
+
+@media (max-width: 600px){
+    /* ヘッダー調整 */
+    .hd-name{
+        width: 95%;
+        height: 20em;
+    }
+
+    .hd-name>p{
+        font-size: 1.5em;
+    }
+    
+    .hd-name>p>span{
+        font-size: 1.8em;
+    }
+
+    .face-icon{
+        width: 4.5em;
+        height: auto;
+        bottom: 0.2em;
+        right: 1.5em;
+
+
+    }
+
+}
+
+
+/* タブメニュー　ーーーーーーーーーーーーーー */
+
+.main-content{
+    width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0 1em 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu>li>a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    color: rgb(121, 116, 116);
+    text-decoration: none;
+    border-radius: 0.3em 0.3em 0 0;
+}
+
+.menu>li>a.active{
+    background-color: rgb(132, 125, 125);
+    color: white;
+}
+
+.menu>li>a:not(.active):hover{
+    opacity: 0.5;
+    transition: opacity 0.4s;
+}
+
+.content.active{
+    background-color: rgb(132, 125, 125);
+    color: white;
+    display: block;
+    min-height: 30em;
+    padding: 0.9em;
+
+}
+
+.content{
+    display: none;
+    border-radius: 0.5em;
+}
+
+@media (width: 600px){
+    
+    /* タブメニュー調整 */
+    .container{
+        width: 90%;
+        height: 20em;
+    }
+
+    .menu>li>a{
+        width: 5em;
+    }
+
+}
+
+/* わたしのこと・できることーーーーーーーーーーーーーーーーー */
+
+.about-me>p{
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+.about-me>h3{
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+@media (max-width: 600px){
+    .about-me>p{
+        font-size: 1em;
+    }
+}
+
+/* お問い合わせ ーーーーーーーーーーーーーーーーーーー */
+
+.contact-text{
+    width: 80%;
+    height: auto;
+    margin: 1.4em auto;
+}
+
+.contact-text>h2{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+form{
+    width: 100%;
+    margin: 4em auto;
+
+}
+
+table{
+    margin: 0 auto;
+    width: 90%;
+}
+
+input{
+    width: 90%;
+    padding: 0.5em;
+    margin: 0.5em;
+    border: solid 0.1em #ddd;
+}
+
+textarea{
+    width: 90%;
+    height: auto;
+    min-height: 10em;
+    margin: 0.5em;
+    padding: 0.5em;
+    border: solid 0.1em #ddd;
+}
+
+table>tr>td>text{
+    color: white;
+    
+}
+
+.submit-btn{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 1em;
+
+}
+
+#submit-btn{
+    width: 6em;
+    height: 2.5em;
+    background-color: #d7d7d7;
+    color: #333;
+    border-radius: 0.5em;
+    margin: 0 auto;
+}
+
+@media (width: 600px){
+    
+    /* お問合わせ調整 */
+    form{
+        width: 100%;
+        margin: 0;
+    }
+
+    table{
+        width: 100%;
+    }
+
+    textarea{
+        width: 60%;
+        min-height: 5em;
+    }
+
+
+}
+
+/* ポートフォリオ一覧 */
+.portfolio-wrap{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 10em;
+    /* background-color: rgb(225, 236, 240); */
+}
+
+.pf-box-wrap{
+    width: 85%;
+    height: auto;
+    margin: 10em auto;
+}
+
+.portfolio-img{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+.portfolio-img>h1{
+    width: 70%;
+    color: #333;
+    font-size: 3em;
+    position: absolute;
+    bottom: 0;
+    left: 3.5em;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+#pc-icon{
+    width: 7em;
+    height: auto;
+    margin-right: 1em;
+    margin-top: 0.5em;
+}
+
+
+.pf-box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 21em;
+    height: 16em;
+    margin: 1.5em;
+    overflow: hidden;
+    background-color:rgb(250, 195, 172);
+    /* border: rgb(193, 193, 193) solid 0.1em; */
+    border-radius: 0.2em;
+}
+
+.box>a{
+    color: #333;
+    text-decoration: none;
+}
+
+.box>a>img{
+    width: 21em;
+    height: 16em;
+}
+
+@media (max-width: 600px){
+    .pf-box-wrap>h1{
+        font-size: 2em;
+
+    }
+
+    .pf-box{
+        flex-direction: column;
+    }
+
+
+    .portfolio-img{
+        margin: 0 auto;
+    }
+
+    .portfolio-img>h1{
+        width: 70%;
+        color: #333;
+        font-size: 2.5em;
+        bottom: 0;
+        left: 3em;
+
+    }
+
+    #pc-icon{
+        width: 4.5em;
+        height: auto;
+        margin-right: 1em;
+    }
+
+}
+
+/* フッター */
+footer{
+    width: 100%;
+    height: 11em;
+    margin: 0 auto;
+}
+
+.ft{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ft>img{
+    width: 6em;
+    height: auto;
+}
+
+.ft-text{
+    margin-right: 1em;
+}
+
+.ft-text>h2{
+    color: #333;
+    margin: 0.5em;
+}
+
+.ft-text>h2>span{
+   background: linear-gradient(transparent 60%, rgb(255, 219, 14) 90%);
+}
+
+.ft-text>p{
+    color: #333;
+    margin-left: 3em;
+}
+
+.ft-text>p>span{
+    color: rgb(11, 10, 10);
+    background: linear-gradient(transparent 60%, rgb(255, 222, 138) 90%);
+}
+
+@media (max-width: 600px){
+    .ft-text>h2{
+        font-size: 1em;
+        margin: 0.5em;
+    }
+    
+    .ft-text>p{
+        font-size: 0.8em;
+        margin-left: 3em;
+        text-align: center;
+    }
+
+    .ft>img{
+        width: 4.5em;
+        height: auto;
+    }
+
+
+}
