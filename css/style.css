@@ -296,7 +296,7 @@ table>tr>td>text{
 .box{
     width: 21em;
     height: 16em;
-    margin: 1.5em;
+    margin: 1.5em auto;
     overflow: hidden;
     background-color:rgb(250, 195, 172);
     /* border: rgb(193, 193, 193) solid 0.1em; */
@@ -316,7 +316,10 @@ table>tr>td>text{
 @media (max-width: 600px){
     .pf-box-wrap>h1{
         font-size: 2em;
+    }
 
+    .pf-box-wrap{
+        margin: 10em auto;
     }
 
     .pf-box{
