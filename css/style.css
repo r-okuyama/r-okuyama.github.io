@@ -339,7 +339,7 @@ table>tr>td>text{
 
     #pc-icon{
         width: 4.5em;
-        height: auto;
+        height: 4em;
         margin-right: 1em;
     }
 
@@ -407,8 +407,8 @@ footer{
     }
 
     .ft>img{
-        width: 6em;
-        height: auto;
+        width: 4.5em;
+        height: 5em;
     }
 
 
