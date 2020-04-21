@@ -61,12 +61,8 @@ body{
         height: auto;
         bottom: 0.2em;
         right: 1.5em;
-
-
     }
-
 }
-
 
 /* タブメニュー　ーーーーーーーーーーーーーー */
 
@@ -84,16 +80,23 @@ body{
 .menu{
     list-style: none;
     padding: 0;
-    margin: 0 1em 0 0;
+    margin: 0 auto;
     display: flex;
     justify-content: flex-end;
+    
 }
 
+ .menu>li{
+     width: 20%;
+ }
+
 .menu>li>a{
-    display: inline-block;
-    width: 100%;
+    display: block;
+    width: 60%;
+    height: auto;
     text-align: center;
     padding: 1em;
+    margin: 0 0 0 0.5em;
     color: rgb(121, 116, 116);
     text-decoration: none;
     border-radius: 0.3em 0.3em 0 0;
@@ -114,7 +117,7 @@ body{
     color: white;
     display: block;
     min-height: 30em;
-    padding: 0.9em;
+    padding: 0.5em;
 
 }
 
@@ -123,16 +126,21 @@ body{
     border-radius: 0.5em;
 }
 
-@media (width: 600px){
+@media (max-width: 600px){
     
     /* タブメニュー調整 */
     .container{
         width: 90%;
-        height: 20em;
+        height: auto;
     }
 
-    .menu>li>a{
-        width: 5em;
+    .menu{
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu>li{
+        width: 100%;
     }
 
 }
@@ -382,6 +390,11 @@ footer{
 }
 
 @media (max-width: 600px){
+
+    .ft-text{
+        margin: 0 auto;
+    }
+
     .ft-text>h2{
         font-size: 1em;
         margin: 0.5em;
@@ -394,7 +407,7 @@ footer{
     }
 
     .ft>img{
-        width: 4.5em;
+        width: 6em;
         height: auto;
     }
 
